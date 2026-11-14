@@ -238,7 +238,8 @@ fun HomeScreen(
                 }
             )
 
-            Spacer(modifier = Modifier.height(24.dp))
+            // room for the corner credit below, so it never covers the last button
+            Spacer(modifier = Modifier.height(48.dp))
         }
 
         Box(

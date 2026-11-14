@@ -10,10 +10,11 @@ permissions:
 
 env:
   OLCBOX_VERSION_MAJOR_MINOR: "1.0"
-  # The alananisimov/olcbox workflow was recreated after 1.0.69, so
-  # github.run_number restarted. Run #6 must publish Android versionCode 70.
-  OLCBOX_RELEASE_RUN_NUMBER_BASE: "5"
-  OLCBOX_RELEASE_PATCH_BASE: "69"
+  # kol9wtf/olcbox is standalone since 2026-11-15 and github.run_number
+  # restarted at 1. Our numbering starts above every upstream release
+  # (upstream reached 1.0.129): run #N publishes 1.0.(199+N), versionCode 199+N.
+  OLCBOX_RELEASE_RUN_NUMBER_BASE: "0"
+  OLCBOX_RELEASE_PATCH_BASE: "199"
 
 jobs:
   release_version:

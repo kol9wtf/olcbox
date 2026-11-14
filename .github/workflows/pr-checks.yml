@@ -38,7 +38,7 @@ jobs:
       - name: Checkout olcrtc
         uses: actions/checkout@v7
         with:
-          repository: alananisimov/olcrtc
+          repository: kol9wtf/olcrtc
           ref: ${{ steps.core.outputs.sha }}
           path: olcrtc
           submodules: recursive

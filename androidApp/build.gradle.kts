@@ -47,6 +47,7 @@ android {
         targetSdk = 37
 
         applicationId = "org.olcbox.app"
+        manifestPlaceholders["appLabel"] = "Olcbox"
         versionCode = olcboxVersionCode.get()
         versionName = olcboxVersion.get()
 
@@ -68,6 +69,10 @@ android {
 
     buildTypes {
         debug {
+            // Side-by-side install next to the store-signed release build.
+            applicationIdSuffix = ".h1"
+            versionNameSuffix = "-h1"
+            manifestPlaceholders["appLabel"] = "Olcbox H1"
             if (hasReleaseKeystore) {
                 signingConfig = signingConfigs.getByName("release")
             }
